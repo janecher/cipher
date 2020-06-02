@@ -1,6 +1,4 @@
 const sentence = prompt("Input a sentence");
-console.log(sentence);
-console.log(sentence.length);
 
 const firstAndLastLetter = function(words){
     const firstLetter = words.charAt(0).toUpperCase();
@@ -16,6 +14,17 @@ const thirdFunction = function(sentence){
     return sentence+reverseLetters(firstAndLastLetter(sentence));
 }
 
+const fourthFunction = function(sentence){
+    return sentence.charAt(Math.floor(sentence.length/2))+thirdFunction(sentence);
+}
+
+const resultFunction = function(sentence){
+    return fourthFunction(sentence).split('').reverse().join('');
+}
+
+console.log(sentence);
 console.log(firstAndLastLetter(sentence));
 console.log(reverseLetters(firstAndLastLetter(sentence)));
 console.log(thirdFunction(sentence));
+console.log(fourthFunction(sentence));
+console.log(resultFunction(sentence));
