@@ -28,3 +28,13 @@ console.log(reverseLetters(firstAndLastLetter(sentence)));
 console.log(thirdFunction(sentence));
 console.log(fourthFunction(sentence));
 console.log(resultFunction(sentence));
+
+$(document).ready(function(){
+    $("button.origin").click(function() {
+      $("p").text(sentence);
+    });
+  
+    $("button.cipher").click(function() {
+        $("p").text(resultFunction(sentence));
+    });
+});
